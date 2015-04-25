@@ -16,6 +16,7 @@ mkdir -p ~/.virtualenvs
 
 # Install Docker
 sudo -i wget -qO- https://get.docker.com/ | sh
+sudo apt-get install apparmor
 
 # Install R
 sudo cat "deb http://cran.csiro.au/bin/linux/ubuntu trusty/" > /etc/apt/sources.list
