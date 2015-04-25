@@ -16,3 +16,9 @@ mkdir -p ~/.virtualenvs
 
 # Install Docker
 sudo -i wget -qO- https://get.docker.com/ | sh
+
+# Install R
+sudo cat "deb http://cran.csiro.au/bin/linux/ubuntu trusty/" > /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+sudo apt-get update
+sudo apt-get install -y r-base
