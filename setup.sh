@@ -15,8 +15,12 @@ sudo pip install -U virtualenvwrapper
 mkdir -p ~/.virtualenvs
 
 # Install Docker
-sudo -i wget -qO- https://get.docker.com/ | sh
+sudo sh -c 'wget -qO- https://get.docker.com/ | sh'
 sudo apt-get install apparmor
+sudo apt-get install -y curl
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo chmod +x /usr/local/bin/docker-compose
+
 
 # Install R
 sudo cat "deb http://cran.csiro.au/bin/linux/ubuntu trusty/" > /etc/apt/sources.list
